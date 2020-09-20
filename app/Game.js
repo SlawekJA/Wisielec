@@ -1,1 +1,5 @@
-console.log("dziala")
+class Game {
+
+}
+
+const game = new Game()
