@@ -1,5 +1,5 @@
 class Game {
-
+    start() {
+        console.log("game start")
+    }
 }
-
-const game = new Game()
