@@ -1,7 +1,7 @@
 class Game {
 
     quotes = [{
-            text: "Pan Tadeusz",
+            text: "pan tadeusz",
             category: "Utwor literacki"
         },
         {
@@ -11,8 +11,11 @@ class Game {
         {
             text: "akademia pana kleksa",
             category: "Film"
+        },
+        {
+            text: "ogniem i mieczem",
+            category: "Film"
         }
-
     ]
     constructor({
         lettersWrapper,
@@ -30,7 +33,8 @@ class Game {
     guess(letter) {
         console.log(letter)
     }
-    start() {
+
+    drawLetters() {
         for (let i = 0; i < 26; i++) {
             const label = (i + 10).toString(36)
             const button = document.createElement("button")
@@ -38,5 +42,9 @@ class Game {
             button.addEventListener("click", () => this.guess(label))
             this.lettersWrapper.appendChild(button)
         }
+    }
+
+    start() {
+        this.drawLetters()
     }
 }
