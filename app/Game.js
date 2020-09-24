@@ -1,3 +1,7 @@
+import {
+    Quote
+} from "./Quote.js"
+
 class Game {
 
     quotes = [{
@@ -28,6 +32,12 @@ class Game {
         this.wordWrapper = wordWrapper
         this.outputWrapper = outputWrapper
 
+        const {
+            text,
+            category
+        } = this.quotes[Math.floor(Math.random() * this.quotes.length)]
+        this.categoryWrapper.innerHTML = category
+        this.quote = new Quote(text)
     }
 
     guess(letter) {
@@ -46,5 +56,8 @@ class Game {
 
     start() {
         this.drawLetters()
+
+        const content = this.quote.getContent()
+        this.wordWrapper.textContent = content
     }
 }
