@@ -23,6 +23,8 @@ html {
 #letters button {
     padding: 10px;
     margin: 10px;
+    color: white;
+    background-color: black;
 }
 
 #output {

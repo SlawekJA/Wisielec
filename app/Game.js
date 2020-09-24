@@ -1,4 +1,19 @@
 class Game {
+
+    quotes = [{
+            text: "Pan Tadeusz",
+            category: "Utwor literacki"
+        },
+        {
+            text: "janko muzykant",
+            category: "Utwor literacki"
+        },
+        {
+            text: "akademia pana kleksa",
+            category: "Film"
+        }
+
+    ]
     constructor({
         lettersWrapper,
         categoryWrapper,
